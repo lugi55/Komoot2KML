@@ -7,9 +7,12 @@ import gpxpy
 import re
 import xml.etree.ElementTree as ET
 import shutil
+from dotenv import load_dotenv
 
-EMAIL    = ""
-PASSWORD = ""
+config = load_dotenv("config.env")
+
+EMAIL = os.getenv("EMAIL")
+PASSWORD = os.getenv("PASSWORD")
 BASE_DIR  = "gpx_files"
 SKIP_CACHE = "skipped_ids.txt"
 
