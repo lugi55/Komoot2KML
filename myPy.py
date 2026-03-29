@@ -65,6 +65,7 @@ def get_activities():
         f"--mail={EMAIL}",
         f"--pass={PASSWORD}",
         "--list-tours",
+        "-t", "recorded",
     ]
     result = subprocess.run(cmd, capture_output=True, text=True)
     if result.returncode != 0:
